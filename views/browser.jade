@@ -25,7 +25,7 @@ block content
     p Visit 
       a(href="http://kb.mozillazine.org/Location_Bar_search#Location_Bar_search_.28external_-_search_engine.29") this page with instructions
       |  and use the following URL as the search string (or see below if you want to use a localized Google URL): 
-    code http://www.duckduckgoog.up.railway.app?q=
+    code http://duckduckgoog.up.railway.app?q=
     br
     br
     hr
@@ -39,9 +39,9 @@ block content
     hr
     h3 Using a different (localized) Google URL
     p If you would rather make DuckDuckGoog search google.com.au or google.co.jp etc., than the default encrypted.google.com, then just include that in your search URL, using something like 
-    code http://www.duckduckgoog.up.railway.app?q=searchstring&google=custom-google-url.com
+    code http://duckduckgoog.up.railway.app?q=searchstring&google=custom-google-url.com
     p For example, if you use Chrome and want to default your Google search to Google Japan, use this:
-    code http://www.duckduckgoog.up.railway.app?q=%s&google=google.co.jp
+    code http://duckduckgoog.up.railway.app?q=%s&google=google.co.jp
     p Note that if you use Firefox, you don't have the option to manually change search engine URLs like that, so you'll need to install an addon of something like 
       a(href='http://mycroft.mozdev.org/index.html') Mycroft
       |  that allows you to do this.
@@ -51,9 +51,9 @@ block content
     p If you would like to use another search engine other than google (Like Bing or Yahoo), simply put the url and a 
       code  %q
       |  where the search goes, like so:
-    code http://www.duckduckgoog.up.railway.app?q=searchstring&searchengine=http://searchengine.com?query=%q
+    code http://duckduckgoog.up.railway.app?q=searchstring&searchengine=http://searchengine.com?query=%q
     p For example, if you use Chrome and want to default your search to Yahoo, use this:
-    code http://www.duckduckgoog.up.railway.app?q=%s&searchengine=http://search.yahoo.com/search?q=%q
+    code http://duckduckgoog.up.railway.app?q=%s&searchengine=http://search.yahoo.com/search?q=%q
     p Make sure to put the 
       code  http:// 
       |  or the 
