@@ -31,7 +31,7 @@ app.get('/', function(req, res) {
     if (query.match(/![A-Za-z0-9]+/) || query.substring(0, 2) === "! " || query.substring(0, 1) === "\\") {
 
       console.log('Queried DuckDuckGo');
-      res.redirect('https://duckduckgo.com?q=' + encQuery);
+      res.redirect('https://duckduckgoog.up.railway.app?q=' + encQuery);
 
     } else if (req.query['searchengine']) {
 
