@@ -2,66 +2,66 @@ extends layout
 
 block content
   #container
-    h1 DuckDuckGoog
+    h1 DuckDuckBing
     h2 Set your default browser search!
     hr
     h3 Chrome
     p
       strong Without Search Suggestions
-    p Just by visiting the site, Chrome should have already stored it as a search engine. Just go to Chrome's search engine settings and find duckduckgoog.up.railway.app in that list, then click "Make Default" next to it.
+    p Just by visiting the site, Chrome should have already stored it as a search engine. Just go to Chrome's search engine settings and find duckduckbing.up.railway.app in that list, then click "Make Default" next to it.
     p
       strong With Search Suggestions
     p Unfortunately Chrome can't auto-discover more than one search per site, so if you want to use search suggestions, click 
-      a(href='#', onclick='window.external.AddSearchProvider("http://duckduckgoog.up.railway.app/opensearchsuggest.xml");') this link
+      a(href='#', onclick='window.external.AddSearchProvider("http://duckduckbing.up.railway.app/opensearchsuggest.xml");') this link
       | . Note that after doing so you'll probably want to go into Chrome's search engine options to set it as the default search by clicking "Make Default" next to it.
     hr
 
     h3 Firefox
     p 
       strong Search Bar
-    p Click the little dropdown arrow in the Firefox search bar, then click "Add DuckDuckGoog" to save it--note that you can choose to use search suggestions or not. You might have to click it again to make it your default.
+    p Click the little dropdown arrow in the Firefox search bar, then click "Add DuckDuckBing" to save it--note that you can choose to use search suggestions or not. You might have to click it again to make it your default.
     p
       strong Awesomebar
     p Visit 
       a(href="http://kb.mozillazine.org/Location_Bar_search#Location_Bar_search_.28external_-_search_engine.29") this page with instructions
-      |  and use the following URL as the search string (or see below if you want to use a localized Google URL): 
-    code http://duckduckgoog.up.railway.app?q=
+      |  and use the following URL as the search string (or see below if you want to use a localized Bingle URL): 
+    code http://duckduckbing.up.railway.app?q=
     br
     br
     hr
 
     h3 Other Browsers & Launchers 
-    p DuckDuckGoog should be easy to add to any browser or launcher (Alfred, GnomeDo, etc.) that supports custom searches. 
+    p DuckDuckBing should be easy to add to any browser or launcher (Alfred, GnomeDo, etc.) that supports custom searches. 
     p Just use this search string in your browser/launcher's search engine options to create a custom search: 
-    code http://www.duckduckgoog.up.railway.app?q=SEARCH
+    code http://www.duckduckbing.up.railway.app?q=SEARCH
     p (Replace SEARCH with whatever your browser/launcher expects the placeholder to be).
 
-    hr
-    h3 Using a different (localized) Google URL
-    p If you would rather make DuckDuckGoog search google.com.au or google.co.jp etc., than the default encrypted.google.com, then just include that in your search URL, using something like 
-    code http://duckduckgoog.up.railway.app?q=searchstring&google=custom-google-url.com
-    p For example, if you use Chrome and want to default your Google search to Google Japan, use this:
-    code http://duckduckgoog.up.railway.app?q=%s&google=google.co.jp
-    p Note that if you use Firefox, you don't have the option to manually change search engine URLs like that, so you'll need to install an addon of something like 
-      a(href='http://mycroft.mozdev.org/index.html') Mycroft
-      |  that allows you to do this.
+    //- hr
+    //- h3 Using a different (localized) Bingle URL
+    //- p If you would rather make DuckDuckBing search bing.com.au or bing.co.jp etc., than the default encrypted.bing.com, then just include that in your search URL, using something like 
+    //- code http://duckduckbing.up.railway.app?q=searchstring&bing=custom-bing-url.com
+    //- p For example, if you use Chrome and want to default your Bingle search to Bingle Japan, use this:
+    //- code http://duckduckbing.up.railway.app?q=%s&bing=bing.co.jp
+    //- p Note that if you use Firefox, you don't have the option to manually change search engine URLs like that, so you'll need to install an addon of something like 
+    //-   a(href='http://mycroft.mozdev.org/index.html') Mycroft
+    //-   |  that allows you to do this.
 
     hr
     h3 Using a custom search engine
-    p If you would like to use another search engine other than google (Like Bing or Yahoo), simply put the url and a 
+    p If you would like to use another search engine other than Bing (Like Google or Yahoo), simply put the url and a 
       code  %q
       |  where the search goes, like so:
-    code http://duckduckgoog.up.railway.app?q=searchstring&searchengine=http://searchengine.com?query=%q
+    code http://duckduckbing.up.railway.app?q=searchstring&searchengine=http://searchengine.com?query=%q
     p For example, if you use Chrome and want to default your search to Yahoo, use this:
-    code http://duckduckgoog.up.railway.app?q=%s&searchengine=http://search.yahoo.com/search?q=%q
+    code http://duckduckbing.up.railway.app?q=%s&searchengine=http://search.yahoo.com/search?q=%q
     p Make sure to put the 
       code  http:// 
       |  or the 
       code  https://
       |  before the URL.
-    p Also be aware that DuckDuckGoog will default to google.com if there is an error in the syntax.
+    p Also be aware that DuckDuckBing will default to bing.com if there is an error in the syntax.
 
-    hr
-    p If you have issues, feel free to 
-      a(href="mailto:mikecrittenden@gmail.com") email me.
+    //- hr
+    //- p If you have issues, feel free to 
+    //-   a(href="mailto:mikecrittenden@gmail.com") email me.
 

@@ -1,27 +1,28 @@
 var express = require('express'),
-    http = require('http');
+    http = require('http'),
+	methodOverride = require('method-override');
 
 var app = express();
 
-app.configure(function(){
+// app.configure(function(){
   app.set('port', process.env.PORT || 3000);
   app.set('view engine', 'jade');
-  app.use(express.favicon(__dirname + '/public/images/favicon.ico'));
-  app.use(express.bodyParser());
-  app.use(express.methodOverride());
-  app.use(app.router);
+//   app.use(express.favicon(__dirname + '/public/images/favicon.ico'));
+//   app.use(express.bodyParser());
+  app.use(methodOverride());
+//   app.use(app.router);
   app.use(express.static(__dirname + '/public'));
-});
+// });
 
-app.configure('development', function(){
-  app.use(express.errorHandler());
-  app.use(express.logger('dev'));
-});
+// app.configure('development', function(){
+//   app.use(express.errorHandler());
+//   app.use(express.logger('dev'));
+// });
 
-app.configure('production', function(){
-  app.use(express.errorHandler());
-  app.use(express.logger());
-});
+// app.configure('production', function(){
+//   app.use(express.errorHandler());
+//   app.use(express.logger());
+// });
 
 app.get('/', function(req, res) {
   if (req.query["q"]) {
@@ -41,17 +42,17 @@ app.get('/', function(req, res) {
         customSearchURL = searchEngine.replace(/%q/g, encQuery);
         res.redirect(customSearchURL);
       } else {
-        console.log('Error in search engine syntax. Using Google.');
-        res.redirect('https://www.google.com/search?q=' + encQuery);
+        console.log('Error in search engine syntax. Using Bing.');
+        res.redirect('https://www.bing.com/search?q=' + encQuery);
       }
 
     } else {
 
-      console.log('Queried Google');
-      if (req.query['google']) {
-        res.redirect('https://' + req.query['google'] + '/search?q=' + encQuery);
+      console.log('Queried Bing');
+      if (req.query['bing']) {
+        res.redirect('https://' + req.query['bing'] + '/search?q=' + encQuery);
       } else {
-        res.redirect('https://www.google.com/search?q=' + encQuery);
+        res.redirect('https://www.bing.com/search?q=' + encQuery);
       }
 
     }
