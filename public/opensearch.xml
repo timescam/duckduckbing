@@ -13,7 +13,7 @@
     <Attribution>DuckDuckGo and Bing</Attribution>
     <SyndicationRight>open</SyndicationRight>
     <Query role="example" searchTerms="Apple !i"/>
-    <Image height="16" width="16" type="image/vnd.microsoft.icon">http://duckduckbing.up.railway.app/favicon.ico</Image>
-    <Url type="text/html" template="http://duckduckbing.up.railway.app/?q={searchTerms}"/>
-    <Url type="application/opensearchdescription+xml" rel="self" template="http://duckduckbing.up.railway.app/opensearch.xml" />
+    <Image height="16" width="16" type="image/vnd.microsoft.icon">http://ddb.fly.dev/favicon.ico</Image>
+    <Url type="text/html" template="http://ddb.fly.dev/?q={searchTerms}"/>
+    <Url type="application/opensearchdescription+xml" rel="self" template="http://ddb.fly.dev/opensearch.xml" />
 </OpenSearchDescription>
